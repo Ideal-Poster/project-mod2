@@ -5,16 +5,16 @@
 <h2><%= category.name %>:</h2>
     <ul>
     <% category.books.each do |book|  %>
-        <li><%= book.title %></li>
+        <li><%= link_to book.title, book_path(book) %></li>
     <% end %>
     </ul>
 <% end %>
 
 
-<h2> Your favorites: </h2>
-<% @user.books.each do |book| %>
 
 
 
 
 
+
+ 

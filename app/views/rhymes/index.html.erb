@@ -1,0 +1,11 @@
+<h1> All Nursery Rhymes </h1>
+
+
+<% @categories.each do |category| %>
+<h2><%= category.name %>:</h2>
+    <ul>
+    <% category.rhymes.each do |rhyme|  %>
+        <li><%= rhyme.title %></li>
+    <% end %>
+    </ul>
+<% end %>
