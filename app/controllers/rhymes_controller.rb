@@ -1,0 +1,2 @@
+class RhymesController < ApplicationController
+end

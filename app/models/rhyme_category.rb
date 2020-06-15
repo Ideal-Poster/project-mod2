@@ -1,0 +1,2 @@
+class RhymeCategory < ApplicationRecord
+end
