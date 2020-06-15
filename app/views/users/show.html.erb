@@ -1,0 +1,39 @@
+<h1> Hi <%= @user.name %>!</h1>
+
+<h3> You are <%= @user.age %> years old!</h3>
+
+
+
+<h3> Your Favorite Books: </h3>
+
+<% if @user.books.empty? %>
+<p> You have no favorite books yet. </p>
+<% else %>
+    <ul>
+    <% @user.books.each do |book| %> 
+        <li><%= book.title %></li>
+    <% end %> 
+    </ul>
+<% end %>
+
+<%= button_to "See All Books", books_path,  method: :get %>
+
+
+
+<h3> Your Favorite Nursery Rhymes: </h3>
+
+<% if @user.rhymes.empty? %>
+<p> You have no favorite nursery rhymes yet. </p>
+<% else %>
+    <ul>
+    <% @user.rhymes.each do |rhyme| %> 
+        <li><%= rhyme.title %></li>
+    <% end %> 
+    </ul>
+<% end %>
+
+<%= button_to "See All Nursery Rhymes", rhymes_path,  method: :get %>
+
+
+<%= button_to "Edit Your Account", edit_user_path(@user),  method: :get %>
+<%= button_to "Delete Your Account", user_path(@user),  method: :delete %>

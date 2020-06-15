@@ -1,0 +1,20 @@
+<h1> All Books </h1>
+
+
+<% @categories.each do |category| %>
+<h2><%= category.name %>:</h2>
+    <ul>
+    <% category.books.each do |book|  %>
+        <li><%= book.title %></li>
+    <% end %>
+    </ul>
+<% end %>
+
+
+<h2> Your favorites: </h2>
+<% @user.books.each do |book| %>
+
+
+
+
+

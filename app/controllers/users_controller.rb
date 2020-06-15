@@ -33,6 +33,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    FavoriteBook.delete_by(user_id: @user.id)
+    FavoriteRhyme.delete_by(user_id: @user.id)
+    @user.delete
+    redirect_to :root
+  end
+
   def login
   end
 
