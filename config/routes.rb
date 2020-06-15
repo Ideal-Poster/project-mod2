@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'users#home'
 
+  get '/login/' , to: 'users#login', as: 'login'
+  get '/find_user/' , to: 'users#find_user', as: 'find_user'
+
   resources :users
   resources :books
   resources :rhymes

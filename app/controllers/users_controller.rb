@@ -7,10 +7,42 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to '/'
+      redirect_to user_path(@user)
     else
       flash[:errors] = @user.errors.full_messages
       redirect_to new_user_path
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+
+    if @user.update(user_params)
+      redirect_to user_path(@user)
+    else
+      flash[:errors] = @user.errors.full_messages
+      redirect_to edit_user_path
+    end
+  end
+
+  def show
+    @user = User.find(params[:id])
+  end
+
+  def login
+  end
+
+  def find_user
+    @user = User.find_by(username: params[:username] )
+    if @user
+      redirect_to user_path(@user)
+    else
+      flash[:failed] = "Please enter a valid username. #{params[:username]} doesn't exist."
+      redirect_to login_path
     end
   end
 
