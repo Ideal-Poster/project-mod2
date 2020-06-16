@@ -6,13 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.delete_all
-FavoriteBook.delete_all
-Book.delete_all
-Rhyme.delete_all
-FavoriteRhyme.delete_all
-BookCategory.delete_all
-RhymeCategory.delete_all
+FavoriteBook.destroy_all
+FavoriteRhyme.destroy_all
+Rhyme.destroy_all
+Book.destroy_all
+BookCategory.destroy_all
+RhymeCategory.destroy_all
+User.destroy_all
 
 10.times do 
   User.create(
@@ -132,115 +132,115 @@ Book.create(
 end
 
 
-# animals = RhymeCategory.create(name: "Animals")
-# goodnight = RhymeCategory.create(name: "Goodnight")
-# sun_and_rain = RhymeCategory.create(name: "Sun and Rain")
-# movement = RhymeCategory.create(name: "Movement")
+animals = RhymeCategory.create(name: "Animals")
+goodnight = RhymeCategory.create(name: "Goodnight")
+sun_and_rain = RhymeCategory.create(name: "Sun and Rain")
+movement = RhymeCategory.create(name: "Movement")
 
 
-# Rhyme.create(
-#   title: "Twinkle, Twinkle Little Star",
-#   video_url: "https://youtu.be/yCjJyiqpAuU",
-#   rhyme_category_id: goodnight.id,
-#   img_url: "twinkle.jpg"
-# )
+Rhyme.create(
+  title: "Twinkle, Twinkle Little Star",
+  video_url: "https://youtu.be/yCjJyiqpAuU",
+  rhyme_category_id: goodnight.id,
+  img_url: "twinkle.jpg"
+)
 
-# Rhyme.create(
-#   title: "Goodnight, Sleep Tight",
-#   video_url: "https://youtu.be/3xjgBTTJYqI",
-#   rhyme_category_id: goodnight.id,
-#   img_url: "sleeptight.jpg"
-# )
+Rhyme.create(
+  title: "Goodnight, Sleep Tight",
+  video_url: "https://youtu.be/3xjgBTTJYqI",
+  rhyme_category_id: goodnight.id,
+  img_url: "sleeptight.jpg"
+)
 
-# Rhyme.create(
-#   title: "Rock-a-bye Baby",
-#   video_url: "https://www.youtube.com/watch?v=NQItZVlGu8g",
-#   rhyme_category_id: goodnight.id,
-#   img_url: "rockabye.jpg"
-# )
+Rhyme.create(
+  title: "Rock-a-bye Baby",
+  video_url: "https://www.youtube.com/watch?v=NQItZVlGu8g",
+  rhyme_category_id: goodnight.id,
+  img_url: "rockabye.jpg"
+)
 
-# Rhyme.create(
-#   title: "The Itsy, Bitsy Spider",
-#   video_url: "https://www.youtube.com/watch?v=w_lCi8U49mY",
-#   rhyme_category_id: sun_and_rain.id,
-#   img_url: "spider.jpg"
-# )
+Rhyme.create(
+  title: "The Itsy, Bitsy Spider",
+  video_url: "https://www.youtube.com/watch?v=w_lCi8U49mY",
+  rhyme_category_id: sun_and_rain.id,
+  img_url: "spider.jpg"
+)
 
-# Rhyme.create(
-#   title: "It's Raining It's Pouring",
-#   video_url: "https://www.youtube.com/watch?v=avurCRJiUj0",
-#   rhyme_category_id: sun_and_rain.id,
-#   img_url: "raining.jpg"
-# )
+Rhyme.create(
+  title: "It's Raining It's Pouring",
+  video_url: "https://www.youtube.com/watch?v=avurCRJiUj0",
+  rhyme_category_id: sun_and_rain.id,
+  img_url: "raining.jpg"
+)
 
-# Rhyme.create(
-#   title: "Rain, Rain Go Away",
-#   video_url: "https://www.youtube.com/watch?v=Zu6o23Pu0Do",
-#   rhyme_category_id: sun_and_rain.id,
-#   img_url: "rain.jpg"
-# )
-
-
-# Rhyme.create(
-#   title: "Mr. Golden Sun",
-#   video_url: "https://www.youtube.com/watch?v=hlzvrEfyL2Y",
-#   rhyme_category_id: sun_and_rain.id,
-#   img_url: "sun.jpg"
-# )
-
-# Rhyme.create(
-#   title: "Head Shoulders Knees and Toes",
-#   video_url: "https://www.youtube.com/watch?v=WX8HmogNyCY",
-#   rhyme_category_id: movement.id,
-#   img_url: "head.jpg"
-# )
-
-# Rhyme.create(
-#   title: "Row, Row, Row Your Boat",
-#   video_url: "https://www.youtube.com/watch?v=7otAJa3jui8",
-#   rhyme_category_id: movement.id,
-#   img_url: "row.jpg"
-# )
-
-# Rhyme.create(
-#   title: "If You're Happy and You Know It",
-#   video_url: "https://www.youtube.com/watch?v=l4WNrvVjiTw",
-#   rhyme_category_id: movement.id,
-#   img_url: "happy.jpg"
-# )
-
-# Rhyme.create(
-#   title: "The Wheels on the Bus",
-#   video_url: "https://www.youtube.com/watch?v=yWirdnSDsV4",
-#   rhyme_category_id: movement.id,
-#   img_url: "bus.jpg"
-# )
-
-# Rhyme.create(
-#   title: "Five Little Ducks",
-#   video_url: "https://www.youtube.com/watch?v=pZw9veQ76fo",
-#   rhyme_category_id: animals.id,
-#   img_url: "ducks.jpg"
-# )
-
-# Rhyme.create(
-#   title: "Hickory-Dickory Dock",
-#   video_url: "https://www.youtube.com/watch?v=XSPV-ezPMhQ",
-#   rhyme_category_id: animals.id,
-#   img_url: "clock.jpg"
-# )
-
-# Rhyme.create(
-#   title: "Five Little Monkeys",
-#   video_url: "https://www.youtube.com/watch?v=VKm_S4PTyA8",
-#   rhyme_category_id: animals.id,
-#   img_url: "monkey.jpg"
-# )
+Rhyme.create(
+  title: "Rain, Rain Go Away",
+  video_url: "https://www.youtube.com/watch?v=Zu6o23Pu0Do",
+  rhyme_category_id: sun_and_rain.id,
+  img_url: "rain.jpg"
+)
 
 
-# 20.times do
-#   FavoriteRhyme.create(
-#     user: User.all.sample,
-#     rhyme: Rhyme.all.sample
-#   )
-# end
+Rhyme.create(
+  title: "Mr. Golden Sun",
+  video_url: "https://www.youtube.com/watch?v=hlzvrEfyL2Y",
+  rhyme_category_id: sun_and_rain.id,
+  img_url: "sun.jpg"
+)
+
+Rhyme.create(
+  title: "Head Shoulders Knees and Toes",
+  video_url: "https://www.youtube.com/watch?v=WX8HmogNyCY",
+  rhyme_category_id: movement.id,
+  img_url: "head.jpg"
+)
+
+Rhyme.create(
+  title: "Row, Row, Row Your Boat",
+  video_url: "https://www.youtube.com/watch?v=7otAJa3jui8",
+  rhyme_category_id: movement.id,
+  img_url: "row.jpg"
+)
+
+Rhyme.create(
+  title: "If You're Happy and You Know It",
+  video_url: "https://www.youtube.com/watch?v=l4WNrvVjiTw",
+  rhyme_category_id: movement.id,
+  img_url: "happy.jpg"
+)
+
+Rhyme.create(
+  title: "The Wheels on the Bus",
+  video_url: "https://www.youtube.com/watch?v=yWirdnSDsV4",
+  rhyme_category_id: movement.id,
+  img_url: "bus.jpg"
+)
+
+Rhyme.create(
+  title: "Five Little Ducks",
+  video_url: "https://www.youtube.com/watch?v=pZw9veQ76fo",
+  rhyme_category_id: animals.id,
+  img_url: "ducks.jpg"
+)
+
+Rhyme.create(
+  title: "Hickory-Dickory Dock",
+  video_url: "https://www.youtube.com/watch?v=XSPV-ezPMhQ",
+  rhyme_category_id: animals.id,
+  img_url: "clock.jpg"
+)
+
+Rhyme.create(
+  title: "Five Little Monkeys",
+  video_url: "https://www.youtube.com/watch?v=VKm_S4PTyA8",
+  rhyme_category_id: animals.id,
+  img_url: "monkey.jpg"
+)
+
+
+20.times do
+  FavoriteRhyme.create(
+    user: User.all.sample,
+    rhyme: Rhyme.all.sample
+  )
+end
