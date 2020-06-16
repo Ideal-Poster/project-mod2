@@ -9,7 +9,7 @@ class RhymesController < ApplicationController
         @rhyme = Rhyme.find(params[:id])
     end
 
-    def favorite 
+    def favorite
         @user = User.find(session[:user_id])
         @rhyme = Rhyme.find(params[:id])
         if find_favorite_rhyme

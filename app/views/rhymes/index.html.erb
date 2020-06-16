@@ -7,7 +7,10 @@
 <h2><%= category.name %>:</h2>
     <ul>
     <% category.rhymes.each do |rhyme|  %>
-        <li><%= rhyme.title %></li>
+        <li><%= link_to rhyme.title, rhyme_path(rhyme) %></li>
     <% end %>
     </ul>
 <% end %>
+
+
+
