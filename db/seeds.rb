@@ -196,6 +196,12 @@ Rhyme.create(
   rhyme_category_id: animals
 )
 
+Rhyme.create(
+  title: "Five Little Monkeys",
+  video_url: "https://www.youtube.com/watch?v=VKm_S4PTyA8",
+  rhyme_category_id: animals
+)
+
 
 
 20.times do
