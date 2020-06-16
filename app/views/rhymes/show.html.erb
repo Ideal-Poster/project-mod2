@@ -8,7 +8,7 @@
 <%= button_to "All Rhymes 📚", rhymes_path, method: :get %>
 
 <% if FavoriteRhyme.find_by(user_id: @user.id, rhyme_id: @rhyme.id) %>
-  <%= button_to "Favorite ⭐️", controller: "rhymes", action: "favorite" %>
-<% else %>
   <%= button_to "Unfavorite ❌", controller: "rhymes", action: "favorite" %>
+<% else %>
+  <%= button_to "Favorite ⭐️", controller: "rhymes", action: "favorite" %>
 <% end %>
