@@ -1,6 +1,6 @@
 <div id="navbar">
   <div class="nav-element left-element">
-    link_to "Home 🏠", user_path(session[:user_id])
+    <%= link_to "Home 🏠", user_path(session[:user_id])%>
   </div>
 
   <div class="nav-element middle-elements">
@@ -11,6 +11,6 @@
   </div>
 
   <div class="nav-element right-element">
-    <% link_to "👤Logout", logout_path, method: :delete %>
+    <%= link_to "👤Logout", logout_path, method: :delete %>
   </div>
 </div>

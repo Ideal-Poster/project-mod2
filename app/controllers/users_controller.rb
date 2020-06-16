@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :auth, only: [:new, :create, :login, :find_user, :home]
+  # skip_before_action :auth, only: [:new, :create, :login, :find_user, :home]
 
   def new
     @user = User.new
@@ -7,8 +7,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    session[:user_id] = @user.id
     if @user.save
+      session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
       flash[:errors] = @user.errors.full_messages
@@ -33,6 +33,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+   
     if @user.id == session[:user_id]
       # render show
     else
@@ -69,7 +70,6 @@ class UsersController < ApplicationController
   end
 
   def home
-    byebug
   end
 
   private 
