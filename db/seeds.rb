@@ -23,7 +23,6 @@ RhymeCategory.delete_all
   )
 end
 
-
 llama = BookCategory.create(name: "Llama Llama")
 eric_carl = BookCategory.create(name: "Eric Carle")
 give_a_mouse_a_cookie = BookCategory.create(name: "If You Give a Mouse A Cookie")
@@ -57,7 +56,7 @@ Book.create(
 )
 
 Book.create(
-  title: "The Very Hungry Catepillar",
+  title: "The Very Hungry Caterpillar",
   video_url: "https://www.youtube.com/watch?v=vkYmvxP0AJI",
   author: "Eric Carle",
   book_category_id: eric_carl.id
@@ -111,6 +110,93 @@ Book.create(
   author: "Laura Numeroff",
   book_category_id: give_a_mouse_a_cookie.id
 )
+
+animals = RhymeCategory.create(name: "Animals")
+goodnight = RhymeCategory.create(name: "Goodnight")
+sun_and_rain = RhymeCategory.create(name: "Sun and Rain")
+movement = RhymeCategory.create(name: "Movement")
+
+
+Rhyme.create(
+  title: "Twinkle, Twinkle Little Star",
+  video_url: "https://youtu.be/yCjJyiqpAuU",
+  rhyme_category_id: goodnight
+)
+
+Rhyme.create(
+  title: "Goodnight, Sleep Tight",
+  video_url: "https://youtu.be/3xjgBTTJYqI",
+  rhyme_category_id: goodnight
+)
+
+Rhyme.create(
+  title: "Rock-a-bye Baby",
+  video_url: "https://www.youtube.com/watch?v=NQItZVlGu8g",
+  rhyme_category_id: goodnight
+)
+
+Rhyme.create(
+  title: "The Itsy, Bitsy Spider",
+  video_url: "https://www.youtube.com/watch?v=w_lCi8U49mY",
+  rhyme_category_id: sun_and_rain
+)
+
+Rhyme.create(
+  title: "It's Raining It's Pouring",
+  video_url: "https://www.youtube.com/watch?v=avurCRJiUj0",
+  rhyme_category_id: sun_and_rain
+)
+
+Rhyme.create(
+  title: "Rain, Rain Go Away",
+  video_url: "https://www.youtube.com/watch?v=Zu6o23Pu0Do",
+  rhyme_category_id: sun_and_rain
+)
+
+
+Rhyme.create(
+  title: "Mr. Golden Sun",
+  video_url: "https://www.youtube.com/watch?v=hlzvrEfyL2Y",
+  rhyme_category_id: sun_and_rain
+)
+
+Rhyme.create(
+  title: "Head Shoulders Knees and Toes",
+  video_url: "https://www.youtube.com/watch?v=WX8HmogNyCY",
+  rhyme_category_id: movement
+)
+
+Rhyme.create(
+  title: "Row, Row, Row Your Boat",
+  video_url: "https://www.youtube.com/watch?v=7otAJa3jui8",
+  rhyme_category_id: movement
+)
+
+Rhyme.create(
+  title: "If You're Happy and You Know It",
+  video_url: "https://www.youtube.com/watch?v=l4WNrvVjiTw",
+  rhyme_category_id: movement
+)
+
+Rhyme.create(
+  title: "The Wheels on the Bus",
+  video_url: "https://www.youtube.com/watch?v=yWirdnSDsV4",
+  rhyme_category_id: movement
+)
+
+Rhyme.create(
+  title: "Five Little Ducks",
+  video_url: "https://www.youtube.com/watch?v=pZw9veQ76fo",
+  rhyme_category_id: animals
+)
+
+Rhyme.create(
+  title: "Hickory-Dickory Dock",
+  video_url: "https://www.youtube.com/watch?v=XSPV-ezPMhQ",
+  rhyme_category_id: animals
+)
+
+
 
 20.times do
   FavoriteBook.create(
