@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/login/' , to: 'users#login', as: 'login'
   get '/find_user/' , to: 'users#find_user', as: 'find_user'
+  post 'books/:id', to: 'books#favorite', as: 'favorite'
 
   resources :users
   resources :books

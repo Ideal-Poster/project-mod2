@@ -2,5 +2,10 @@
 
 <h1> VIDEO ETC HERE</h1>
 
+<%= button_to "All books 📚", books_path, method: :get %>
 
-<%= button_to "Favorite ⭐️", controller: "favorite_books", action: "create" %>
+<% if FavoriteBook.find_by(user_id: @user.id, book_id: @book.id) %>
+  <%= button_to "Favorite ⭐️", controller: "books", action: "favorite" %>
+<% else %>
+  <%= button_to "Unfavorite ❌", controller: "books", action: "favorite" %>
+<% end %>

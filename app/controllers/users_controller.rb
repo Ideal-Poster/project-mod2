@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    # session[:user_id] = @user.id
+    session[:user_id] = @user.id
     if @user.save
       redirect_to user_path(@user)
     else
@@ -15,7 +15,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    # @user = User.find(session[:user_id])
     @user = User.find(params[:id])
   end
 
@@ -31,7 +30,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    # @user = User.find(session[:user_id])
     @user = User.find(params[:id])
   end
 
@@ -44,12 +42,11 @@ class UsersController < ApplicationController
   end
 
   def login
-    # session[:auth] = 
   end
 
   def find_user
     @user = User.find_by(username: params[:username] )
-    # session[:user_id] = @user.id
+    session[:user_id] = @user.id
     if @user
       redirect_to user_path(@user)
     else
