@@ -1,5 +1,9 @@
 <h1> Hi <%= @user.name %>!</h1>
 
+
+    <%= flash[:errors] if flash[:errors]%>
+
+
 <h3> You are <%= @user.age %> years old!</h3>
 
 

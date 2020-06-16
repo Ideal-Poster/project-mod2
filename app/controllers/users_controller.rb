@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :auth, only: [:new, :create, :login, :find_user, :home]
+
   def new
     @user = User.new
   end
@@ -31,6 +33,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    if @user.id == session[:user_id]
+      # render show
+    else
+      flash[:errors] =  "You tried to view another user's page, here is your page."
+      redirect_to user_path(session[:user_id])
+    end
   end
 
   def destroy
@@ -55,7 +63,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def logout
+    session.delete :user_id
+    redirect_to '/'
+  end
+
   def home
+    byebug
   end
 
   private 

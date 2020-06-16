@@ -1,0 +1,16 @@
+<div id="navbar">
+  <div class="nav-element left-element">
+    link_to "Home 🏠", user_path(session[:user_id])
+  </div>
+
+  <div class="nav-element middle-elements">
+  <%= link_to "Books", books_path %>
+  </div>
+  <div class="nav-element middle-elements">
+    <%= link_to "Rhymes", rhymes_path %>
+  </div>
+
+  <div class="nav-element right-element">
+    <% link_to "👤Logout", logout_path, method: :delete %>
+  </div>
+</div>
