@@ -1,15 +1,15 @@
-
-<h1> Hi <%= @user.name %>!</h1>
+<div class= "index-content">
+<div class= "name"><h1>  Hi <%= @user.name %>! 👋</h1></div>
 
 
     <%= flash[:errors] if flash[:errors]%>
 
 
-<h3> You are <%= @user.age %> years old!</h3>
+<div class = "age"><h2> You are <%= @user.age %> years old!</h2></div>
 
 
 
-<h3> Your Favorite Books: </h3>
+<h2> Your Favorite Books: </h2>
 
 <% if @user.books.empty? %>
     <p> You have no favorite books yet. </p>
@@ -21,11 +21,11 @@
     <% end %> 
 <% end %>
 
-<%= button_to "See All Books 📚", books_path,  method: :get %>
+<%# button_to "See All Books 📚", books_path,  method: :get %>
 
 
 
-<h3> Your Favorite Nursery Rhymes: </h3>
+<h2> Your Favorite Nursery Rhymes: </h2>
 
 <% if @user.rhymes.empty? %>
 <p> You have no favorite nursery rhymes yet. </p>
@@ -36,10 +36,14 @@
             <% end %>
     <% end %> 
     
-<% end %>
+<% end %><br>
 
-<%= button_to "See All Nursery Rhymes 🥁", rhymes_path,  method: :get %>
+<%# button_to "See All Nursery Rhymes 🥁", rhymes_path,  method: :get %>
 
+<div class="user-buttons">
+<%= button_to "Edit Your Account", edit_user_path(@user),  method: :get, class: "user-button edit-account" %>
+<%= button_to "Delete Your Account", user_path(@user),  method: :delete, class: "user-button delete-account" %>
 
-<%= button_to "Edit Your Account", edit_user_path(@user),  method: :get %>
-<%= button_to "Delete Your Account", user_path(@user),  method: :delete %>
+</div>
+
+</div>

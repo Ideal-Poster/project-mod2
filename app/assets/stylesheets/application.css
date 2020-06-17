@@ -130,7 +130,6 @@ input.submit-button {
   width: 115px;
   border-radius: 5px;
   transform: translateY(-5px);
-  color: #02111E;
   font-size: medium;
 }
 
@@ -162,5 +161,65 @@ input[type=number]{
   width: 200px;
 } 
 
+.video {
+text-align: center;
+width: 100vw;
+margin-top: 45px;
+margin-bottom: 30px;
+}
 
+.show-buttons {
+  text-align: center;
+  width: 100vw;
+  padding-bottom: 60px;
+}
+
+input.fav-button {
+  background: #C9DAF8;
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 20px 50px 20px 50px;
+  font-size: 32px;
+  color: #02111E;
+}
+
+
+.name {
+  background: rgba(128, 128, 128, 0.445);
+  font-size: 40px;
+  font-family: 'Trebuchet MS';
+  padding-top: 40px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+
+.age {
+  color: #FDE596;
+  margin-bottom: 40px;
+}
+
+.user-buttons {
+  margin-top: 40px;
+}
+
+
+.user-button {
+  color: #02111E;
+  height: 85px;
+  width: 175px;
+  border-radius: 5px;
+  font-size: medium;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.edit-account {
+ background: #FDE596;
+}
+
+.delete-account {
+  background: rgb(236, 93, 93);
+}
 
