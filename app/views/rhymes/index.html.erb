@@ -1,15 +1,21 @@
-<h1> Nursery Rhymes </h1>
+<div class="index-content">
 
-<% @categories.each do |category| %>
-    <h2><%= category.name %>:</h2>
+    <div class="title">
+        <h1> Nursery Rhymes </h1>
+    </div>
 
-    <% category.rhymes.each do |rhyme|  %>
-        <%= link_to rhyme_path(rhyme) do %>
-            <%= image_tag "#{rhyme.img_url}", class: "img-link" %>
+    <% @categories.each do |category| %>
+        <h2><%= category.name %>:</h2>
+
+        <% category.rhymes.each do |rhyme|  %>
+            <%= link_to rhyme_path(rhyme) do %>
+                <%= image_tag "#{rhyme.img_url}", class: "img-link" %>
+            <% end %>
         <% end %>
-    <% end %>
 
-<% end %>
+    <% end %>
+</div>
+
    
 
    

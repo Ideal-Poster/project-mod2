@@ -17,6 +17,8 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 #navbar {
@@ -64,7 +66,6 @@ a ,a:visited {
   height: 200px;
   position: relative;
   margin: 20px 50px 20px 50px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
   font-size: 25px;
   color: #02111E;
 }
@@ -81,5 +82,24 @@ form.button_to {
 h1 {
   margin-top: 0;
   padding-top: 20px;
+}
+
+.img-link {
+  width: 200px;
+}
+
+.index-content {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.title {
+  background: rgba(128, 128, 128, 0.445);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* font-weight: 300; */
+  /* border: 5px solid grey; */
+  font-size: 25px;
+  color: #FDE596;
 }
 
