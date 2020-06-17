@@ -1,19 +1,11 @@
-
-<h1> All Nursery Rhymes </h1>
+<h1> Nursery Rhymes </h1>
 
 <% @categories.each do |category| %>
-<h2><%= category.name %>:</h2>
-
-    <ul>
-    <% category.rhymes.each do |rhyme|  %>
-        <li><%= link_to rhyme.title, rhyme_path(rhyme) %></li>
-    <% end %>
-    </ul>
-
+    <h2><%= category.name %>:</h2>
 
     <% category.rhymes.each do |rhyme|  %>
         <%= link_to rhyme_path(rhyme) do %>
-            <%= image_tag "/public/images/rhymes/#{rhyme.img_url}", class: "some css class here" %>
+            <%= image_tag "#{rhyme.img_url}", class: "img-link" %>
         <% end %>
     <% end %>
 

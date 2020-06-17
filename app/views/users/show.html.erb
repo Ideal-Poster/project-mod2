@@ -12,13 +12,13 @@
 <h3> Your Favorite Books: </h3>
 
 <% if @user.books.empty? %>
-<p> You have no favorite books yet. </p>
-<% else %>
-    <ul>
+    <p> You have no favorite books yet. </p>
+<% else %>   
     <% @user.books.each do |book| %> 
-        <li><%= book.title %></li>
+        <%= link_to book_path(book) do %>
+            <%= image_tag "#{book.img_url}", class: "img-link" %>
+        <% end %>
     <% end %> 
-    </ul>
 <% end %>
 
 <%= button_to "See All Books", books_path,  method: :get %>
@@ -30,11 +30,12 @@
 <% if @user.rhymes.empty? %>
 <p> You have no favorite nursery rhymes yet. </p>
 <% else %>
-    <ul>
     <% @user.rhymes.each do |rhyme| %> 
-        <li><%= rhyme.title %></li>
+            <%= link_to rhyme_path(rhyme) do %>
+                <%= image_tag "#{rhyme.img_url}", class: "img-link" %>
+            <% end %>
     <% end %> 
-    </ul>
+    
 <% end %>
 
 <%= button_to "See All Nursery Rhymes", rhymes_path,  method: :get %>
