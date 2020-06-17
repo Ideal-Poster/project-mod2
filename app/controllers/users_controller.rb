@@ -55,8 +55,9 @@ class UsersController < ApplicationController
 
   def find_user
     @user = User.find_by(username: params[:username] )
-    session[:user_id] = @user.id
+    
     if @user
+      session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
       flash[:failed] = "Please enter a valid username. #{params[:username]} doesn't exist."

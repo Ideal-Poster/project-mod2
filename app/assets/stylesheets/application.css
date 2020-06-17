@@ -54,6 +54,7 @@ a ,a:visited {
 }
 
 #logo {
+  padding-top: 40px;
   width: 100vw;
 }
 
