@@ -43,9 +43,10 @@ Book.create(
   img_url: "LlamaPajama.jpg"
 )
 
+
 Book.create(
   title: "Llama Llama Mad at Mama",
-  video_url: "https://www.youtube.com/watch?v=Ka-tznfolzE",
+  video_url: "https://www.youtube.com/embed/Ka-tznfolzE",
   author: "Anna Dewdney",
   book_category_id: llama.id,
   img_url: "LlamaMad.jpg"

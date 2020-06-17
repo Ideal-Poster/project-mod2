@@ -3,6 +3,7 @@
 <h1> All Books </h1>
 
 
+
 <% @categories.each do |category| %>
 <h2><%= category.name %>:</h2>
     <ul>
@@ -10,6 +11,15 @@
         <li><%= link_to book.title, book_path(book) %></li>
     <% end %>
     </ul>
+
+    
+    <% category.books.each do |book|  %>
+        <%= link_to book_path(book) do %>
+            <%= image_tag "/public/images/books/#{book.img_url}", class: "some css class here" %>
+        <% end %>
+    <% end %>
+  
+
 <% end %>
 
 

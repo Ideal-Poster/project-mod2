@@ -2,7 +2,7 @@
 
 <h1> <%= @book.title %></h1>
 
-<h1> VIDEO ETC HERE</h1>
+<iframe width="560" height="315" src= <%="#{@book.video_url}"%>  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <%= button_to "All Books 📚", books_path, method: :get %>
 
