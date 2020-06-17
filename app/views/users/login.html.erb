@@ -1,17 +1,22 @@
-<h1>Enter Your Exact Username To Login:</h1>
+<div class="title"><h1>Login:</h1></div>
 
-<% if flash[:failed] %>
-    <%= flash[:failed] %>
-<% end %>
 
-<%= form_tag find_user_path, method: "get" do %>
+<div class="login-form">
 
-    <label> Username:</label>
-    <%= text_field_tag :username%>
+    <% if flash[:failed] %>
+        <%= flash[:failed] %>
+    <% end %>
 
-    <%= submit_tag "Login" %>
+    <%= form_tag find_user_path, method: "get" do %>
 
-<% end %>
+        <label> Username:</label>
+ <div class= "login-button-form">
+        <%= text_field_tag :username%>
+
+        <%= submit_tag "Login", class: "submit-button" %>
+</div>
+    <% end %>
+</div>
 
 
 
