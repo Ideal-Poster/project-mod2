@@ -49,3 +49,30 @@ a ,a:visited {
   background-image: url("https://media1.giphy.com/media/UYBDCJjwOd9Re/giphy.gif?cid=6104955e52424d41f5846bce35cff0ac939f2b60d0239d64&rid=giphy.gif"); 
   min-height: 100vh;
 }
+
+#logo {
+  width: 100vw;
+}
+
+
+.home-button {
+  display: inline-block;
+  background: #C9DAF8;
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 20px 50px 20px 50px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+  font-size: 25px;
+  color: #02111E;
+}
+
+form.button_to {
+  display: inline-block;
+}
+
+
+.home-buttons-container {
+  text-align: center;
+}

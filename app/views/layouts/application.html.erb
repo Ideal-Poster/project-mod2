@@ -11,6 +11,8 @@
 
   <body>
     <%= render '/users/nav' if display_nav? %>
-    <%= yield %>
+    <div id = "background">
+      <%= yield %>
+    </div>
   </body>
 </html>

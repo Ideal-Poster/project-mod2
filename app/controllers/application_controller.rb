@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
 
   def display_nav? 
     controller_actions = [ 'users#new', 'users#login', 'users#home' ]
-    current_controller_action = [params[:controller], params[:user]].join("#") 
-    return controller_actions.include?(controller_actions) ? false : true
+    current_controller_action = [params[:controller], params[:action]].join("#") 
+    return controller_actions.include?(current_controller_action) ? false : true
   end
 
   helper_method :display_nav?
