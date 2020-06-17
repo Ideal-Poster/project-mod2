@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <%# render partial conditionally %>
+    <%= render '/users/nav' if display_nav? %>
     <%= yield %>
   </body>
 </html>

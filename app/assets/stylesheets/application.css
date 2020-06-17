@@ -14,18 +14,14 @@
  *= require_self
  */
 
-body > * {
-  margin: 8px
-}
-
-body {
+ body {
   margin: 0
 }
 
 #navbar {
   height: 50px;
   width: 100vw;
-  background: lightskyblue;
+  background: #C9DAF8;
   margin: 0;
 }
 
@@ -33,10 +29,23 @@ body {
   font-family: "Arial";
   display: inline-block;
   padding: 10px 20px 0px 20px;
+  color: #02111E;
 }
 .right-element {
   position: absolute;
   right: 0;
 }
 
+a ,a:visited {
+    /* color: white; */
+    color: #02111E;
+    text-decoration: none;
+}
 
+#background {
+  color: #C9DAF8;
+  padding: 0;
+  margin: 0;
+  background-image: url("https://media1.giphy.com/media/UYBDCJjwOd9Re/giphy.gif?cid=6104955e52424d41f5846bce35cff0ac939f2b60d0239d64&rid=giphy.gif"); 
+  min-height: 100vh;
+}
