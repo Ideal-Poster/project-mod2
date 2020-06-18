@@ -155,7 +155,7 @@ Rhyme.create(
   title: "Rock-a-bye Baby",
   video_url: "https://www.youtube.com/embed/NQItZVlGu8g",
   rhyme_category_id: goodnight.id,
-  img_url: "rhymes/sleeptight.jpg"
+  img_url: "rhymes/rockabye.jpg"
 )
 
 Rhyme.create(
