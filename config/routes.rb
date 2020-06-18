@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/find_user/' , to: 'users#find_user', as: 'find_user'
   post 'books/:id', to: 'books#favorite', as: 'favorite'
   post 'rhymes/:id', to: 'rhymes#favorite'
+  
 
 
   resources :users

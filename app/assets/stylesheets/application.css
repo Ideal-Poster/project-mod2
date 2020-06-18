@@ -224,3 +224,7 @@ input.fav-button {
   background: rgb(236, 93, 93);
 }
 
+.music {
+  text-align: center;
+  margin-top: 40px;
+}
