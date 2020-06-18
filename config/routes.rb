@@ -9,12 +9,8 @@ Rails.application.routes.draw do
   post 'rhymes/:id', to: 'rhymes#favorite'
   
 
-
   resources :users
-  resources :books
-  resources :rhymes
-  resources :favorite_books
-  resources :favorite_rhymes 
-  resources :book_categories 
-  resources :rhyme_categories
+  resources :books, only: [:show, :index]
+  resources :rhymes, only: [:show, :index] 
+
 end

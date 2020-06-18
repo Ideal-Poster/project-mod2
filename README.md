@@ -1,25 +1,18 @@
-# README
+## GOODNIGHT MOON
+* A Children's Bedtime App, Flatiron Mod2 Rails Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Install Instructions
 
-* Ruby version
+To open and run this application, fork and clone this repo. Run 'bundle install', then 'rails db:migrate' and 'rails db:seed'. Start up a rails server with 'rails s' and you should be good to view this app at http://localhost:3000/.
 
-* System dependencies
 
-* Configuration
+# Description
 
-* Database creation
+Users can login or create an account. Once logged in, they can view books and nursery rhymes by category. They can add and remove a book or nursery rhyme to their favorites, as well as edit and delete their account.
 
-* Database initialization
 
-* How to run the test suite
+©️ Malcolm Gourdine & Chaya Greisman
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
-# project-mod2
