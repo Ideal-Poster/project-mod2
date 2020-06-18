@@ -16,7 +16,7 @@
 <% else %>   
     <% @user.books.each do |book| %> 
         <%= link_to book_path(book) do %>
-            <%= image_tag "#{book.img_url}", class: "img-link" %>
+            <%= image_tag "#{asset_path book.img_url}", class: "img-link" %>
         <% end %>
     <% end %> 
 <% end %>
@@ -32,7 +32,7 @@
 <% else %>
     <% @user.rhymes.each do |rhyme| %> 
             <%= link_to rhyme_path(rhyme) do %>
-                <%= image_tag "#{rhyme.img_url}", class: "img-link" %>
+                <%= image_tag "#{asset_path rhyme.img_url}", class: "img-link" %>
             <% end %>
     <% end %> 
     
@@ -47,3 +47,4 @@
 </div>
 
 </div>
+

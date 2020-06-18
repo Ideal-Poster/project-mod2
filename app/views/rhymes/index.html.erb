@@ -9,7 +9,7 @@
 
         <% category.rhymes.each do |rhyme|  %>
             <%= link_to rhyme_path(rhyme) do %>
-                <%= image_tag "#{rhyme.img_url}", class: "img-link" %>
+                <%= image_tag "#{asset_path rhyme.img_url}", class: "img-link" %>
             <% end %>
         <% end %>
 
