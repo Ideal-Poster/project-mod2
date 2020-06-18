@@ -236,11 +236,11 @@ input.fav-button:hover {
 .edit-account {
  background: #FDE596;
  border: 1px solid #FDE596;
- background-image: linear-gradient(-180deg, #FDE596 0%, rgb(247, 218, 122) 100%);
+ background-image: linear-gradient(-180deg, rgb(243, 231, 190) 0%, rgb(247, 218, 122) 100%);
  box-shadow: 0 1rem 1.25rem 0 rgba(117, 121, 131, 0.5),
              0 -0.25rem 1.5rem rgb(241, 199, 59) inset,
              0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
-             0 0.25rem 0.5rem 0 #FDE596 inset;
+             0 0.25rem 0.5rem 0 rgb(218, 203, 157) inset;
 }
 
 
