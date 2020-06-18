@@ -83,7 +83,13 @@ a ,a:visited {
 }
 .home-button:hover { 
   background-image: linear-gradient(to right, rgb(220, 229, 245) 0%, #C9DAF8 100%);
- }
+}
+
+
+.home-button:active{ 
+  width: 210px;
+  height: 210px;
+}
 
 form.button_to {
   display: inline-block;
