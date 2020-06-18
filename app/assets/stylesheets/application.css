@@ -115,7 +115,7 @@ h1 {
   text-align: center;
 }
 
-.login-form, form#new_user.new_user, form.edit_user {
+.login-form, .new-user-form, .edit-user-form {
   background: rgb(25, 24, 36);
   margin: 50px 20px 20px 20px;
   padding-top: 100px;
@@ -186,14 +186,21 @@ margin-bottom: 30px;
 }
 
 input.fav-button {
-  background: #C9DAF8;
-  border-radius: 100px;
+  background-image: linear-gradient(to right, #77A1D3 0%, #C9DAF8 51%, rgb(220, 229, 245) 100%);
+  border-radius: 150px;
   width: 200px;
   height: 200px;
   position: relative;
   margin: 20px 50px 20px 50px;
   font-size: 32px;
   color: #02111E;
+}
+
+input.fav-button:hover {
+  background: rgb(174, 198, 238);
+  width: 220px;
+  height: 220px;
+
 }
 
 
